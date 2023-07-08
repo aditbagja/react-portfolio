@@ -14,7 +14,7 @@ const Navigation = () => {
 
   return (
     <nav className="py-5">
-      <div className="w-full flex flex-wrap justify-between px-4 sm:px-8">
+      <div className="w-full flex flex-wrap justify-between px-4 sm:px-8 lg:px-16">
         <a href="/" className="font-bold text-lg">
           aditbagja
         </a>
