@@ -3,6 +3,12 @@ import { faArrowUp } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
 const Footer = () => {
+  const scrollToTop = () => {
+    window.scrollTo({
+      top: 0,
+      behavior: "smooth",
+    });
+  };
   const sosmedItem = [
     {
       name: "Instagram",
@@ -33,16 +39,17 @@ const Footer = () => {
                 href={item.href}
                 target="_blank"
                 rel="noreferrer"
-                className="px-2 text-lg relative group"
-              >
+                className="px-2 text-lg relative group">
                 {item.name}
                 <span className="absolute bottom-0 left-0 w-0 border-b-[1px] border-black transition-all group-hover:w-full duration-300"></span>
               </a>
             ))}
           </div>
-          <a href="#hero" className="mx-auto mb-3 text-lg hover:text-slate-600">
+          <button
+            onClick={scrollToTop}
+            className="mx-auto mb-3 text-lg hover:text-slate-600">
             Back to Top <FontAwesomeIcon icon={faArrowUp} />
-          </a>
+          </button>
           <p className="text-center text-lg">&copy; 2023 | aditbagja</p>
         </div>
       </div>
