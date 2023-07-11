@@ -15,7 +15,7 @@ const Portfolio = () => {
 
   const portfolio = [
     {
-      name: "Fathforce Starter Kits",
+      name: "Mockup Fathforce Starter Kits",
       description: "Web Mockup",
       tech: "Figma",
       img: "ffstarterkits/Mockup Backup.png",
@@ -29,7 +29,7 @@ const Portfolio = () => {
       href: "/web/ffstarterkits",
     },
     {
-      name: "DigiLine",
+      name: "Mockup DigiLine",
       description: "Web Mockup",
       tech: "Figma",
       img: "digiline/Dashboard.png",
@@ -85,7 +85,7 @@ const Portfolio = () => {
           </div>
         </div>
         <div className="px-4 sm:px-8 lg:px-16">
-          <div className="relative overflow-hidden bg-cover bg-no-repeat w-11/12 sm:w-full">
+          <div className="relative overflow-hidden bg-cover bg-no-repeat w-11/12 sm:w-full mx-auto">
             {portfolio.map((selected) => (
               <a key={selected.name} href={selected.href}>
                 <div className="md:h-96 lg:h-[30rem] overflow-hidden rounded-2xl">
@@ -96,9 +96,11 @@ const Portfolio = () => {
                   />
                 </div>
                 <div className="flex justify-between flex-col sm:flex-row mt-3 mb-10">
-                  <p className="font-semibold">{selected.name}</p>
-                  <p className="font-semibold">{selected.description}</p>
-                  <p className="font-semibold">{selected.tech}</p>
+                  <p className="font-semibold text-center">{selected.name}</p>
+                  <p className="font-semibold text-center">
+                    {selected.description}
+                  </p>
+                  <p className="font-semibold text-center">{selected.tech}</p>
                 </div>
               </a>
             ))}

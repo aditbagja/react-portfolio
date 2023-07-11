@@ -41,7 +41,7 @@ const Footer = () => {
                 rel="noreferrer"
                 className="px-2 text-lg relative group">
                 {item.name}
-                <span className="absolute bottom-0 left-0 w-0 border-b-[1px] border-black transition-all group-hover:w-full duration-300"></span>
+                <span className="absolute bottom-0 left-0 w-0 border-b border-black transition-all group-hover:w-full duration-300"></span>
               </a>
             ))}
           </div>

@@ -4,9 +4,9 @@ import Navigation from "../../components/Navigation";
 import Footer from "../../components/Footer";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faArrowDown } from "@fortawesome/free-solid-svg-icons";
-import backupImg from "../../assets/img/portfolio/ffstarterkits/Mockup Backup.png";
+import todoImg from "../../assets/img/portfolio/ffstarterkits/todo 1.png";
 
-const MockupFFStarterKits = () => {
+const WebFFStarterKits = () => {
   useLayoutEffect(() => {
     gsap.to("#title", {
       y: 0,
@@ -21,27 +21,18 @@ const MockupFFStarterKits = () => {
       opacity: 1,
     });
   });
-
   const images = [
     {
-      name: "Mockup Backup",
-      src: "ffstarterkits/Mockup Backup.png",
+      name: "To Do List Index",
+      src: "ffstarterkits/todo 1.png",
     },
     {
-      name: "Mockup Create Backup",
-      src: "ffstarterkits/Mockup Create Backup.png",
+      name: "Create New To Do List",
+      src: "ffstarterkits/todo 2.png",
     },
     {
-      name: "Mockup Import",
-      src: "ffstarterkits/Mockup Import.png",
-    },
-    {
-      name: "Wireframe Backup",
-      src: "ffstarterkits/Wireframe Backup.png",
-    },
-    {
-      name: "Wireframe Import",
-      src: "ffstarterkits/Wireframe Import.png",
+      name: "Edit New To Do List",
+      src: "ffstarterkits/todo 3.png",
     },
   ];
   return (
@@ -58,13 +49,13 @@ const MockupFFStarterKits = () => {
             <h1
               id="title2"
               className="text-5xl md:text-6xl lg:text-8xl uppercase font-extrabold translate-y-full opacity-0">
-              Web Mockup
+              Web Apps
             </h1>
           </div>
           <div className="flex flex-wrap justify-between">
             <p className="w-11/12 md:w-2/3 text-xl lg:text-4xl font-medium leading-none mb-10 animate-fade animate-once animate-delay-500">
-              Web Mockup for FFStarterKits Web Apps that build and control your
-              own website
+              To Do List Feature for FFStarterKits Web Apps that build and
+              control your own website
             </p>
             <p className="font-medium text-lg">
               Discover <FontAwesomeIcon icon={faArrowDown} />
@@ -73,8 +64,8 @@ const MockupFFStarterKits = () => {
         </div>
         <div className="mt-3 w-11/12 mx-auto">
           <img
-            src={backupImg}
-            alt="Mockup Backup FFStarterKits"
+            src={todoImg}
+            alt="To Do List FFStarterKits"
             className="rounded-2xl object-cover h-[100vh] w-full"
           />
         </div>
@@ -89,11 +80,11 @@ const MockupFFStarterKits = () => {
                 adipisci sit fugiat vel quidem perspiciatis.
               </p>
               <a
-                href="https://www.figma.com/file/wkHBYg2Wa2MqfHh6u1tBwK/Mockup-backup-import?type=design&node-id=0%3A1&t=s32NUVYjy5yQqX7y-1"
+                href="https://github.com/aditbagja/todolist-ffstarterkits"
                 target="_blank"
                 rel="noreferrer"
                 className="text-lg font-medium py-2 border-b border-black">
-                View all mockup
+                View source code
               </a>
               <div className="mt-16 flex justify-between border-t border-slate-300 py-4">
                 <p className="text-lg font-medium">Project Name </p>
@@ -103,11 +94,11 @@ const MockupFFStarterKits = () => {
               </div>
               <div className="flex justify-between border-t border-slate-300 py-4">
                 <p className="text-lg font-medium">Type </p>
-                <p className="text-lg font-medium text-right">Web Mockup</p>
+                <p className="text-lg font-medium text-right">Web Apps</p>
               </div>
               <div className="flex justify-between border-y border-slate-300 py-4">
                 <p className="text-lg font-medium">Tech </p>
-                <p className="text-lg font-medium text-right">Figma</p>
+                <p className="text-lg font-medium text-right">Laravel 8</p>
               </div>
             </div>
           </div>
@@ -135,20 +126,18 @@ const MockupFFStarterKits = () => {
           <p className="text-4xl md:text-6xl uppercase font-extrabold mb-5">
             Next Portfolio
           </p>
-          <a href="/web/ffstarterkits">
+          <a href="/mockup/digiline">
             <div className="md:h-96 lg:h-[30rem] overflow-hidden rounded-2xl">
               <img
-                src={require(`../../assets/img/portfolio/ffstarterkits/todo 1.png`)}
-                alt="Fathforce Starter Kits"
+                src={require(`../../assets/img/portfolio/digiline/Dashboard.png`)}
+                alt="DigiLine"
                 className="rounded-2xl max-w-lg sm:max-w-full object-cover transition duration-300 ease-in-out hover:scale-105"
               />
             </div>
             <div className="flex justify-between flex-col sm:flex-row mt-3 mb-10">
-              <p className="font-semibold text-center">
-                Fathforce Starter Kits
-              </p>
-              <p className="font-semibold text-center">Web Apps</p>
-              <p className="font-semibold text-center">Laravel 8</p>
+              <p className="font-semibold text-center">DigiLine</p>
+              <p className="font-semibold text-center">Web Mockup</p>
+              <p className="font-semibold text-center">Figma</p>
             </div>
           </a>
         </div>
@@ -158,4 +147,4 @@ const MockupFFStarterKits = () => {
   );
 };
 
-export default MockupFFStarterKits;
+export default WebFFStarterKits;

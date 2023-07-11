@@ -96,7 +96,7 @@ const Home = () => {
           </p>
         </div>
         <div className="px-4 sm:px-8 lg:px-16">
-          <div className="relative overflow-hidden bg-cover bg-no-repeat w-11/12 sm:w-full">
+          <div className="relative overflow-hidden bg-cover bg-no-repeat w-11/12 sm:w-full mx-auto">
             {portfolioSelected.map((selected) => (
               <a
                 key={selected.name}
@@ -111,9 +111,11 @@ const Home = () => {
                   />
                 </div>
                 <div className="flex justify-between flex-col sm:flex-row mt-3 mb-10">
-                  <p className="font-semibold">{selected.name}</p>
-                  <p className="font-semibold">{selected.description}</p>
-                  <p className="font-semibold">{selected.tech}</p>
+                  <p className="font-semibold text-center">{selected.name}</p>
+                  <p className="font-semibold text-center">
+                    {selected.description}
+                  </p>
+                  <p className="font-semibold text-center">{selected.tech}</p>
                 </div>
               </a>
             ))}

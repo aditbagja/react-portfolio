@@ -4,6 +4,8 @@ import Portfolio from "./pages/Portfolio";
 import About from "./pages/About";
 import NotFound from "./pages/NotFound";
 import MockupFFStarterKits from "./pages/portfolio/MockupFFStarterKits";
+import WebFFStarterKits from "./pages/portfolio/WebFFStarterKits";
+import MockupDigiLine from "./pages/portfolio/MockupDigiLine";
 
 function App() {
   return (
@@ -17,6 +19,8 @@ function App() {
             path="/mockup/ffstarterkits"
             element={<MockupFFStarterKits />}
           />
+          <Route path="/web/ffstarterkits" element={<WebFFStarterKits />} />
+          <Route path="/mockup/digiline" element={<MockupDigiLine />} />
           <Route path="*" element={<NotFound />} />
         </Routes>
       </Router>
