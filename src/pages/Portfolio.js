@@ -1,7 +1,9 @@
-import React, { useLayoutEffect } from "react";
-import Navigation from "../components/Navigation";
+import React, { useEffect, useLayoutEffect } from "react";
 import { gsap } from "gsap";
+import Navigation from "../components/Navigation";
 import Footer from "../components/Footer";
+import AOS from "aos";
+import "aos/dist/aos.css";
 
 const Portfolio = () => {
   useLayoutEffect(() => {
@@ -22,7 +24,7 @@ const Portfolio = () => {
       href: "/mockup/ffstarterkits",
     },
     {
-      name: "Fathforce Starter Kits",
+      name: "Fathforce Starter Kits To Do List",
       description: "Web Apps",
       tech: "Laravel 8",
       img: "ffstarterkits/todo 1.png",
@@ -64,6 +66,12 @@ const Portfolio = () => {
       href: "/web/notflix",
     },
   ];
+
+  useEffect(() => {
+    AOS.init();
+    document.title = "Portfolio";
+  }, []);
+
   return (
     <>
       <Navigation />
@@ -87,12 +95,14 @@ const Portfolio = () => {
         <div className="px-4 sm:px-8 lg:px-16">
           <div className="relative overflow-hidden bg-cover bg-no-repeat w-11/12 sm:w-full mx-auto">
             {portfolio.map((selected) => (
-              <a key={selected.name} href={selected.href}>
-                <div className="md:h-96 lg:h-[30rem] overflow-hidden rounded-2xl">
+              <a key={selected.name} href={selected.href} className="group">
+                <div
+                  data-aos="fade-up"
+                  className="md:h-96 lg:h-[30rem] overflow-hidden rounded-2xl">
                   <img
                     src={require("../assets/img/portfolio/" + selected.img)}
                     alt={selected.name}
-                    className="rounded-2xl max-w-lg sm:max-w-full object-cover transition duration-300 ease-in-out hover:scale-105"
+                    className="rounded-2xl max-w-lg sm:max-w-full object-cover transition duration-300 ease-in-out group-hover:scale-105"
                   />
                 </div>
                 <div className="flex justify-between flex-col sm:flex-row mt-3 mb-10">

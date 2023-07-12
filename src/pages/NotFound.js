@@ -1,4 +1,4 @@
-import React, { useLayoutEffect } from "react";
+import React, { useEffect, useLayoutEffect } from "react";
 import { gsap } from "gsap";
 import Navigation from "../components/Navigation";
 
@@ -17,6 +17,11 @@ const NotFound = () => {
       opacity: 1,
     });
   });
+
+  useEffect(() => {
+    document.title = "Not Found";
+  }, []);
+
   return (
     <>
       <Navigation />

@@ -1,11 +1,17 @@
-import React, { useLayoutEffect } from "react";
+import React, { useEffect, useLayoutEffect } from "react";
 import { gsap } from "gsap";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faArrowDown } from "@fortawesome/free-solid-svg-icons";
 import Navigation from "../components/Navigation";
 import Footer from "../components/Footer";
+import AOS from "aos";
+import "aos/dist/aos.css";
 
 const Home = () => {
+  useEffect(() => {
+    AOS.init();
+  }, []);
+
   useLayoutEffect(() => {
     gsap.to("#title", {
       y: 0,
@@ -33,21 +39,21 @@ const Home = () => {
       description: "Web Apps",
       tech: "Laravel 10",
       img: "digiline/web/digiline 1.png",
-      href: "https://github.com/aditbagja/digiline",
+      href: "/web/digiline",
     },
     {
       name: "Bandung Creative Hub",
       description: "Landing Page",
       tech: "HTML, CSS, Javascript",
       img: "bandung-creative-hub/home.jpg",
-      href: "https://aditbagja.github.io/bandung-creative-hub/",
+      href: "/web/bandung-creative-hub",
     },
     {
       name: "Newsletter",
       description: "Landing Page",
       tech: "Tailwind CSS",
       img: "newsletter/home.png",
-      href: "https://aditbagja.github.io/newsletter/",
+      href: "/web/newsletter",
     },
   ];
 
@@ -98,17 +104,18 @@ const Home = () => {
         <div className="px-4 sm:px-8 lg:px-16">
           <div className="relative overflow-hidden bg-cover bg-no-repeat w-11/12 sm:w-full mx-auto">
             {portfolioSelected.map((selected) => (
-              <a
-                key={selected.name}
-                href={selected.href}
-                target="_blank"
-                rel="noreferrer">
-                <div className="md:h-96 lg:h-[30rem] overflow-hidden rounded-2xl">
+              <a key={selected.name} href={selected.href} className="group">
+                <div
+                  data-aos="fade-up"
+                  className="md:h-96 lg:h-[30rem] overflow-hidden rounded-2xl">
                   <img
                     src={require("../assets/img/portfolio/" + selected.img)}
                     alt={selected.name}
-                    className="rounded-2xl max-w-lg sm:max-w-full object-cover transition duration-300 ease-in-out hover:scale-105"
+                    className="rounded-2xl max-w-lg sm:max-w-full object-cover transition duration-300 ease-in-out group-hover:scale-105"
                   />
+                  <div className="inline rounded-full bg-black text-white invisible group-hover:visible scale-0  group-hover:scale-150 ">
+                    View Detail
+                  </div>
                 </div>
                 <div className="flex justify-between flex-col sm:flex-row mt-3 mb-10">
                   <p className="font-semibold text-center">{selected.name}</p>

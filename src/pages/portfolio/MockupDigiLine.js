@@ -1,10 +1,12 @@
-import React, { useLayoutEffect } from "react";
+import React, { useEffect, useLayoutEffect } from "react";
 import { gsap } from "gsap";
-import Navigation from "../../components/Navigation";
-import Footer from "../../components/Footer";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faArrowDown } from "@fortawesome/free-solid-svg-icons";
+import Navigation from "../../components/Navigation";
+import Footer from "../../components/Footer";
 import digilineImg from "../../assets/img/portfolio/digiline/Dashboard.png";
+import AOS from "aos";
+import "aos/dist/aos.css";
 
 const MockupDigiLine = () => {
   useLayoutEffect(() => {
@@ -44,6 +46,12 @@ const MockupDigiLine = () => {
       src: "digiline/Riwayat Transaksi.png",
     },
   ];
+
+  useEffect(() => {
+    AOS.init();
+    document.title = "DigiLine Web Mockup";
+  }, []);
+
   return (
     <>
       <Navigation />
@@ -70,7 +78,7 @@ const MockupDigiLine = () => {
             </p>
           </div>
         </div>
-        <div className="mt-3 w-11/12 mx-auto">
+        <div data-aos="fade-up" className="mt-3 w-11/12 mx-auto">
           <img
             src={digilineImg}
             alt="Mockup DigiLine"
@@ -112,6 +120,7 @@ const MockupDigiLine = () => {
         <div className="py-32 mx-auto w-11/12">
           {images.map((img) => (
             <div
+              data-aos="fade-up"
               key={img.name}
               className="bg-slate-100 p-2 lg:p-6 mb-10 rounded-2xl">
               <a
@@ -132,12 +141,14 @@ const MockupDigiLine = () => {
           <p className="text-4xl md:text-6xl uppercase font-extrabold mb-5">
             Next Portfolio
           </p>
-          <a href="/web/digiline">
-            <div className="md:h-96 lg:h-[30rem] overflow-hidden rounded-2xl">
+          <a href="/web/digiline" className="group">
+            <div
+              data-aos="fade-up"
+              className="md:h-96 lg:h-[30rem] overflow-hidden rounded-2xl">
               <img
                 src={require(`../../assets/img/portfolio/digiline/web/digiline 1.png`)}
                 alt="DigiLine"
-                className="rounded-2xl max-w-lg sm:max-w-full object-cover transition duration-300 ease-in-out hover:scale-105"
+                className="rounded-2xl max-w-lg sm:max-w-full object-cover transition duration-300 ease-in-out group-hover:scale-105"
               />
             </div>
             <div className="flex justify-between flex-col sm:flex-row mt-3 mb-10">

@@ -1,6 +1,7 @@
-import React, { useLayoutEffect } from "react";
+import React, { useEffect, useLayoutEffect } from "react";
 import { gsap } from "gsap";
 import Navigation from "../components/Navigation";
+import Footer from "../components/Footer";
 
 const About = () => {
   useLayoutEffect(() => {
@@ -17,6 +18,11 @@ const About = () => {
       opacity: 1,
     });
   });
+
+  useEffect(() => {
+    document.title = "About";
+  }, []);
+
   return (
     <>
       <Navigation />
@@ -42,6 +48,7 @@ const About = () => {
           </div>
         </div>
       </section>
+      <Footer />
     </>
   );
 };

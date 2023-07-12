@@ -1,10 +1,12 @@
-import React, { useLayoutEffect } from "react";
+import React, { useEffect, useLayoutEffect } from "react";
 import { gsap } from "gsap";
-import Navigation from "../../components/Navigation";
-import Footer from "../../components/Footer";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faArrowDown } from "@fortawesome/free-solid-svg-icons";
+import Navigation from "../../components/Navigation";
+import Footer from "../../components/Footer";
 import backupImg from "../../assets/img/portfolio/ffstarterkits/Mockup Backup.png";
+import AOS from "aos";
+import "aos/dist/aos.css";
 
 const MockupFFStarterKits = () => {
   useLayoutEffect(() => {
@@ -44,6 +46,12 @@ const MockupFFStarterKits = () => {
       src: "ffstarterkits/Wireframe Import.png",
     },
   ];
+
+  useEffect(() => {
+    AOS.init();
+    document.title = "Fathforce Starter Kits Web Mockup";
+  }, []);
+
   return (
     <>
       <Navigation />
@@ -71,7 +79,7 @@ const MockupFFStarterKits = () => {
             </p>
           </div>
         </div>
-        <div className="mt-3 w-11/12 mx-auto">
+        <div data-aos="fade-up" className="mt-3 w-11/12 mx-auto">
           <img
             src={backupImg}
             alt="Mockup Backup FFStarterKits"
@@ -115,6 +123,7 @@ const MockupFFStarterKits = () => {
         <div className="py-32 mx-auto w-11/12">
           {images.map((img) => (
             <div
+              data-aos="fade-up"
               key={img.name}
               className="bg-slate-100 p-2 lg:p-6 mb-10 rounded-2xl">
               <a
@@ -135,12 +144,14 @@ const MockupFFStarterKits = () => {
           <p className="text-4xl md:text-6xl uppercase font-extrabold mb-5">
             Next Portfolio
           </p>
-          <a href="/web/ffstarterkits">
-            <div className="md:h-96 lg:h-[30rem] overflow-hidden rounded-2xl">
+          <a href="/web/ffstarterkits" className="group">
+            <div
+              data-aos="fade-up"
+              className="md:h-96 lg:h-[30rem] overflow-hidden rounded-2xl">
               <img
                 src={require(`../../assets/img/portfolio/ffstarterkits/todo 1.png`)}
                 alt="Fathforce Starter Kits"
-                className="rounded-2xl max-w-lg sm:max-w-full object-cover transition duration-300 ease-in-out hover:scale-105"
+                className="rounded-2xl max-w-lg sm:max-w-full object-cover transition duration-300 ease-in-out group-hover:scale-105"
               />
             </div>
             <div className="flex justify-between flex-col sm:flex-row mt-3 mb-10">

@@ -1,14 +1,14 @@
-import React, { useEffect, useLayoutEffect } from "react";
+import React, { useLayoutEffect, useEffect } from "react";
 import { gsap } from "gsap";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faArrowDown } from "@fortawesome/free-solid-svg-icons";
 import Navigation from "../../components/Navigation";
 import Footer from "../../components/Footer";
-import todoImg from "../../assets/img/portfolio/ffstarterkits/todo 1.png";
+import newsletterImg from "../../assets/img/portfolio/newsletter/home.png";
 import AOS from "aos";
 import "aos/dist/aos.css";
 
-const WebFFStarterKits = () => {
+const WebNewsletter = () => {
   useLayoutEffect(() => {
     gsap.to("#title", {
       y: 0,
@@ -23,24 +23,33 @@ const WebFFStarterKits = () => {
       opacity: 1,
     });
   });
+
   const images = [
     {
-      name: "To Do List Index",
-      src: "ffstarterkits/todo 1.png",
+      name: "Home",
+      src: "newsletter/home.png",
     },
     {
-      name: "Create New To Do List",
-      src: "ffstarterkits/todo 2.png",
+      name: "Body",
+      src: "newsletter/body.png",
     },
     {
-      name: "Edit New To Do List",
-      src: "ffstarterkits/todo 3.png",
+      name: "News",
+      src: "newsletter/news.png",
+    },
+    {
+      name: "Testimonials",
+      src: "newsletter/testimonials.png",
+    },
+    {
+      name: "Footer",
+      src: "newsletter/footer.png",
     },
   ];
 
   useEffect(() => {
     AOS.init();
-    document.title = "Fathforce Starter Kits To Do List";
+    document.title = "Newsletter";
   }, []);
 
   return (
@@ -52,18 +61,17 @@ const WebFFStarterKits = () => {
             <h1
               id="title"
               className="text-5xl md:text-6xl lg:text-8xl uppercase font-extrabold translate-y-full opacity-0">
-              Fathforce Starter Kits
+              Newsletter
             </h1>
             <h1
               id="title2"
               className="text-5xl md:text-6xl lg:text-8xl uppercase font-extrabold translate-y-full opacity-0">
-              Web Apps
+              Landing Pages
             </h1>
           </div>
           <div className="flex flex-wrap justify-between">
             <p className="w-11/12 md:w-2/3 text-xl lg:text-4xl font-medium leading-none mb-10 animate-fade animate-once animate-delay-500">
-              To Do List Feature for FFStarterKits Web Apps that build and
-              control your own website
+              Newsletter Landing Pages Concept
             </p>
             <p className="font-medium text-lg">
               Discover <FontAwesomeIcon icon={faArrowDown} />
@@ -72,8 +80,8 @@ const WebFFStarterKits = () => {
         </div>
         <div data-aos="fade-up" className="mt-3 w-11/12 mx-auto">
           <img
-            src={todoImg}
-            alt="To Do List FFStarterKits"
+            src={newsletterImg}
+            alt="Newsletter"
             className="rounded-2xl object-cover h-[100vh] w-full"
           />
         </div>
@@ -88,25 +96,23 @@ const WebFFStarterKits = () => {
                 adipisci sit fugiat vel quidem perspiciatis.
               </p>
               <a
-                href="https://github.com/aditbagja/todolist-ffstarterkits"
+                href="https://web-newsletter.vercel.app/"
                 target="_blank"
                 rel="noreferrer"
                 className="text-lg font-medium py-2 border-b border-black">
-                View source code
+                View Demo
               </a>
               <div className="mt-16 flex justify-between border-t border-slate-300 py-4">
                 <p className="text-lg font-medium">Project Name </p>
-                <p className="text-lg font-medium text-right">
-                  Fathforce Starter Kits
-                </p>
+                <p className="text-lg font-medium text-right">Newsletter</p>
               </div>
               <div className="flex justify-between border-t border-slate-300 py-4">
                 <p className="text-lg font-medium">Type </p>
-                <p className="text-lg font-medium text-right">Web Apps</p>
+                <p className="text-lg font-medium text-right">Landing Pages</p>
               </div>
               <div className="flex justify-between border-y border-slate-300 py-4">
                 <p className="text-lg font-medium">Tech </p>
-                <p className="text-lg font-medium text-right">Laravel 8</p>
+                <p className="text-lg font-medium text-right">Tailwind CSS</p>
               </div>
             </div>
           </div>
@@ -135,20 +141,20 @@ const WebFFStarterKits = () => {
           <p className="text-4xl md:text-6xl uppercase font-extrabold mb-5">
             Next Portfolio
           </p>
-          <a href="/mockup/digiline" className="group">
+          <a href="/web/notflix" className="group">
             <div
               data-aos="fade-up"
               className="md:h-96 lg:h-[30rem] overflow-hidden rounded-2xl">
               <img
-                src={require(`../../assets/img/portfolio/digiline/Dashboard.png`)}
-                alt="DigiLine"
+                src={require(`../../assets/img/portfolio/notflix.png`)}
+                alt="Notflix"
                 className="rounded-2xl max-w-lg sm:max-w-full object-cover transition duration-300 ease-in-out group-hover:scale-105"
               />
             </div>
             <div className="flex justify-between flex-col sm:flex-row mt-3 mb-10">
-              <p className="font-semibold text-center">DigiLine</p>
-              <p className="font-semibold text-center">Web Mockup</p>
-              <p className="font-semibold text-center">Figma</p>
+              <p className="font-semibold text-center">Notflix</p>
+              <p className="font-semibold text-center">Landing Pages</p>
+              <p className="font-semibold text-center">React JS</p>
             </div>
           </a>
         </div>
@@ -158,4 +164,4 @@ const WebFFStarterKits = () => {
   );
 };
 
-export default WebFFStarterKits;
+export default WebNewsletter;
