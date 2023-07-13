@@ -17,13 +17,11 @@ const Home = () => {
       y: 0,
       delay: 0.2,
       duration: 0.5,
-      opacity: 1,
     });
     gsap.to("#title2", {
       y: 0,
       delay: 0.4,
       duration: 0.7,
-      opacity: 1,
     });
     gsap.to("#button", {
       y: 0,
@@ -62,15 +60,15 @@ const Home = () => {
       <Navigation />
       <section id="hero" className="pt-10">
         <div className="h-[100vh] px-4 sm:px-8 lg:px-16">
-          <div className="w-full leading-none tracking-tighter mb-6">
+          <div className="w-full leading-none tracking-tighter mb-6 overflow-hidden">
             <h1
               id="title"
-              className="text-5xl md:text-6xl lg:text-8xl uppercase font-extrabold translate-y-full opacity-0">
+              className="text-5xl md:text-6xl lg:text-8xl uppercase font-extrabold translate-y-full">
               Adit Bagja Septiana
             </h1>
             <h1
               id="title2"
-              className="text-5xl md:text-6xl lg:text-8xl uppercase font-extrabold translate-y-full opacity-0">
+              className="text-5xl md:text-6xl lg:text-8xl uppercase font-extrabold translate-y-full">
               Web Developer
             </h1>
           </div>
@@ -113,9 +111,9 @@ const Home = () => {
                     alt={selected.name}
                     className="rounded-2xl max-w-lg sm:max-w-full object-cover transition duration-300 ease-in-out group-hover:scale-105"
                   />
-                  <div className="inline rounded-full bg-black text-white invisible group-hover:visible scale-0  group-hover:scale-150 ">
+                  {/* <div className="inline rounded-full bg-black text-white invisible group-hover:visible scale-0  group-hover:scale-150 ">
                     View Detail
-                  </div>
+                  </div> */}
                 </div>
                 <div className="flex justify-between flex-col sm:flex-row mt-3 mb-10">
                   <p className="font-semibold text-center">{selected.name}</p>
