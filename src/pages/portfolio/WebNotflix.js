@@ -14,13 +14,11 @@ const WebNotflix = () => {
       y: 0,
       delay: 0.2,
       duration: 0.5,
-      opacity: 1,
     });
     gsap.to("#title2", {
       y: 0,
       delay: 0.4,
       duration: 0.7,
-      opacity: 1,
     });
   });
 
@@ -33,21 +31,25 @@ const WebNotflix = () => {
     <>
       <Navigation />
       <section className="pt-10">
-        <div className="h-[100vh] px-4 sm:px-8 lg:px-16 flex flex-col justify-between">
-          <div className="w-full leading-none tracking-tighter">
-            <h1
-              id="title"
-              className="text-5xl md:text-6xl lg:text-8xl uppercase font-extrabold translate-y-full opacity-0">
-              Notflix
-            </h1>
-            <h1
-              id="title2"
-              className="text-5xl md:text-6xl lg:text-8xl uppercase font-extrabold translate-y-full opacity-0">
-              Landing Pages
-            </h1>
+        <div className="h-[85vh] px-4 sm:px-8 lg:px-16 flex flex-col justify-between">
+          <div className="w-full">
+            <div className="overflow-hidden">
+              <h1
+                id="title"
+                className="text-5xl md:text-6xl lg:text-8xl uppercase font-extrabold leading-none tracking-tighter translate-y-full">
+                Notflix
+              </h1>
+            </div>
+            <div className="overflow-hidden">
+              <h1
+                id="title2"
+                className="text-5xl md:text-6xl lg:text-8xl uppercase font-extrabold leading-none tracking-tighter translate-y-full">
+                Landing Pages
+              </h1>
+            </div>
           </div>
-          <div className="flex flex-wrap justify-between">
-            <p className="w-11/12 md:w-2/3 text-xl lg:text-4xl font-medium leading-none mb-10 animate-fade animate-once animate-delay-500">
+          <div className="flex flex-wrap justify-between animate-fade animate-once animate-delay-500">
+            <p className="w-11/12 md:w-2/3 text-xl lg:text-3xl font-medium leading-none mb-10">
               Notflix Landing Pages Concept
             </p>
             <p className="font-medium text-lg">
@@ -55,22 +57,28 @@ const WebNotflix = () => {
             </p>
           </div>
         </div>
-        <div data-aos="fade-up" className="mt-3 w-11/12 mx-auto">
+        <div
+          data-aos="fade-up"
+          data-aos-once="true"
+          className="mt-3 w-11/12 mx-auto">
           <img
             src={notflixImg}
             alt="Notflix"
-            className="rounded-2xl object-cover h-[100vh] w-full"
+            className="rounded-2xl object-cover h-[50vh] md:h-full w-full"
           />
         </div>
         <div className="container mx-auto py-32 px-4">
           <div className="flex flex-wrap">
             <div className="w-full lg:w-1/3">
-              <p className="text-lg font-medium">*</p>
+              <p className="text-lg font-medium">(001)</p>
             </div>
             <div className="w-full lg:w-2/3 ">
               <p className="text-3xl font-medium mb-20">
-                Lorem ipsum dolor, sit amet consectetur adipisicing elit. Dolore
-                adipisci sit fugiat vel quidem perspiciatis.
+                During my exploration of React JS and API integration, I took on
+                the exciting challenge of creating the Notflix landing pages.
+                Embracing a continuous learning mindset, I leveraged my newfound
+                knowledge to develop an immersive user interface that seamlessly
+                interacts with the The Movie Database (TMDB) API.
               </p>
               <a
                 href="https://aditbagja.github.io/tv-series-api-with-react/"
@@ -97,6 +105,7 @@ const WebNotflix = () => {
         <div className="py-32 mx-auto w-11/12">
           <div
             data-aos="fade-up"
+            data-aos-once="true"
             className="bg-slate-100 p-2 lg:p-6 mb-10 rounded-2xl">
             <a href={notflixImg} target="blank" rel="noreferrer">
               <img src={notflixImg} alt="Noflix" className="rounded-lg" />
@@ -110,6 +119,7 @@ const WebNotflix = () => {
           <a href="/mockup/ffstarterkits" className="group">
             <div
               data-aos="fade-up"
+              data-aos-once="true"
               className="md:h-96 lg:h-[30rem] overflow-hidden rounded-2xl">
               <img
                 src={require(`../../assets/img/portfolio/ffstarterkits/Mockup Backup.png`)}
@@ -119,7 +129,7 @@ const WebNotflix = () => {
             </div>
             <div className="flex justify-between flex-col sm:flex-row mt-3 mb-10">
               <p className="font-semibold text-center">
-                Mockup Fathforce Starter Kits
+                Fathforce Starter Kits Mockup
               </p>
               <p className="font-semibold text-center">Web Mockup</p>
               <p className="font-semibold text-center">Figma</p>

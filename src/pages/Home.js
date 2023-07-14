@@ -21,13 +21,12 @@ const Home = () => {
     gsap.to("#title2", {
       y: 0,
       delay: 0.4,
-      duration: 0.7,
+      duration: 0.5,
     });
     gsap.to("#button", {
       y: 0,
       delay: 0.4,
-      duration: 0.9,
-      opacity: 1,
+      duration: 0.5,
     });
   });
 
@@ -58,30 +57,38 @@ const Home = () => {
   return (
     <>
       <Navigation />
-      <section id="hero" className="pt-10">
+      <section id="hero" className="pt-5 sm:pt-10">
         <div className="h-[100vh] px-4 sm:px-8 lg:px-16">
-          <div className="w-full leading-none tracking-tighter mb-6 overflow-hidden">
-            <h1
-              id="title"
-              className="text-5xl md:text-6xl lg:text-8xl uppercase font-extrabold translate-y-full">
-              Adit Bagja Septiana
-            </h1>
-            <h1
-              id="title2"
-              className="text-5xl md:text-6xl lg:text-8xl uppercase font-extrabold translate-y-full">
-              Web Developer
-            </h1>
+          <div className="w-full mb-6">
+            <div className="overflow-hidden">
+              <h1
+                id="title"
+                className="text-5xl md:text-6xl lg:text-8xl uppercase font-extrabold leading-none tracking-tighter translate-y-full">
+                Adit Bagja Septiana
+              </h1>
+            </div>
+            <div className="overflow-hidden">
+              <h1
+                id="title2"
+                className="text-5xl md:text-6xl lg:text-8xl uppercase font-extrabold leading-none tracking-tighter translate-y-full">
+                Web Developer
+              </h1>
+            </div>
           </div>
           <div className="w-11/12 md:w-2/3">
             <p className="text-xl lg:text-4xl font-medium leading-none mb-10 animate-fade animate-once animate-delay-500">
-              Lorem ipsum dolor sit amet consectetur, adipisicing elit. Soluta
-              minima cupiditate laudantium quod nihil ratione!
+              Welcome to my website, where I showcase my passion for web
+              development and demonstrate my expertise in creating visually
+              stunning, user-friendly, and interactive digital experiences that
+              leave a lasting impact.
             </p>
+          </div>
+          <div className="overflow-hidden">
             <a
               id="button"
               href="mailto:aditbagja44@gmail.com"
               target="_blank"
-              className="relative inline-flex items-center justify-center p-4 px-6 py-3 overflow-hidden font-medium transition duration-500 ease-out border border-black rounded-full shadow-md group translate-y-full opacity-0"
+              className="relative inline-flex items-center justify-center p-4 px-6 py-3 overflow-hidden font-medium transition duration-500 ease-out border border-black rounded-full shadow-md group translate-y-full"
               rel="noreferrer">
               <span className="absolute inset-0 flex items-center justify-center w-full h-full text-white duration-500 translate-y-full bg-black group-hover:translate-y-0 ease">
                 Contact Me
@@ -93,7 +100,7 @@ const Home = () => {
             </a>
           </div>
         </div>
-        <div className="w-full flex justify-between px-4 sm:px-8 lg:px-16 mb-6">
+        <div className="w-full flex flex-wrap justify-between px-4 sm:px-8 lg:px-16 mb-6">
           <p className="font-medium text-lg">Selected Portfolio</p>
           <p className="font-medium text-lg">
             Discover <FontAwesomeIcon icon={faArrowDown} />
@@ -105,15 +112,13 @@ const Home = () => {
               <a key={selected.name} href={selected.href} className="group">
                 <div
                   data-aos="fade-up"
+                  data-aos-once="true"
                   className="md:h-96 lg:h-[30rem] overflow-hidden rounded-2xl">
                   <img
                     src={require("../assets/img/portfolio/" + selected.img)}
                     alt={selected.name}
                     className="rounded-2xl max-w-lg sm:max-w-full object-cover transition duration-300 ease-in-out group-hover:scale-105"
                   />
-                  {/* <div className="inline rounded-full bg-black text-white invisible group-hover:visible scale-0  group-hover:scale-150 ">
-                    View Detail
-                  </div> */}
                 </div>
                 <div className="flex justify-between flex-col sm:flex-row mt-3 mb-10">
                   <p className="font-semibold text-center">{selected.name}</p>

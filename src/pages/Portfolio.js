@@ -1,5 +1,7 @@
 import React, { useEffect, useLayoutEffect } from "react";
 import { gsap } from "gsap";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faArrowDown } from "@fortawesome/free-solid-svg-icons";
 import Navigation from "../components/Navigation";
 import Footer from "../components/Footer";
 import AOS from "aos";
@@ -11,13 +13,12 @@ const Portfolio = () => {
       y: 0,
       delay: 0.2,
       duration: 0.5,
-      opacity: 1,
     });
   });
 
   const portfolio = [
     {
-      name: "Mockup Fathforce Starter Kits",
+      name: "Fathforce Starter Kits Mockup",
       description: "Web Mockup",
       tech: "Figma",
       img: "ffstarterkits/Mockup Backup.png",
@@ -78,10 +79,10 @@ const Portfolio = () => {
       <section className="pt-10">
         <div className="container">
           <div className="h-[100vh] px-4 sm:px-8 lg:px-16">
-            <div className="w-full mb-6">
+            <div className="w-full mb-6 overflow-hidden">
               <h1
                 id="title"
-                className="text-5xl md:text-6xl lg:text-8xl uppercase font-extrabold tracking-tighter translate-y-full opacity-0">
+                className="text-5xl md:text-6xl lg:text-8xl uppercase font-extrabold tracking-tighter translate-y-full">
                 Portfolio
               </h1>
             </div>
@@ -92,12 +93,19 @@ const Portfolio = () => {
             </div>
           </div>
         </div>
+        <div className="w-full flex justify-between px-4 sm:px-8 lg:px-16 mb-6">
+          <p className="font-medium text-lg">Portfolio</p>
+          <p className="font-medium text-lg">
+            Discover <FontAwesomeIcon icon={faArrowDown} />
+          </p>
+        </div>
         <div className="px-4 sm:px-8 lg:px-16">
           <div className="relative overflow-hidden bg-cover bg-no-repeat w-11/12 sm:w-full mx-auto">
             {portfolio.map((selected) => (
               <a key={selected.name} href={selected.href} className="group">
                 <div
                   data-aos="fade-up"
+                  data-aos-once="true"
                   className="md:h-96 lg:h-[30rem] overflow-hidden rounded-2xl">
                   <img
                     src={require("../assets/img/portfolio/" + selected.img)}

@@ -20,21 +20,15 @@ const About = () => {
   const services = [
     {
       no: "01.",
-      name: "lorem ipsum",
+      name: "Create your website",
       description:
-        "Lorem ipsum dolor sit amet consectetur adipisicing elit. Ab cumque, officia eaque omnis quasi natus?",
+        "With expertise in web development, I specialize in crafting websites that seamlessly adapt to various devices and screen sizes, ensuring a responsive and user-friendly experience.",
     },
     {
       no: "02.",
-      name: "lorem ipsum",
+      name: "Fix your PC/Laptop problems",
       description:
-        "Lorem ipsum dolor sit amet consectetur adipisicing elit. Ab cumque, officia eaque omnis quasi natus?",
-    },
-    {
-      no: "03.",
-      name: "lorem ipsum",
-      description:
-        "Lorem ipsum dolor sit amet consectetur adipisicing elit. Ab cumque, officia eaque omnis quasi natus?",
+        "In addition to my web development skills, I possess a knack for troubleshooting and resolving PC/laptop issues. Whether it's software glitches, hardware malfunctions, or performance optimization, I have the technical expertise to diagnose and fix problems efficiently, ensuring smooth and reliable computing experiences.",
     },
   ];
 
@@ -57,7 +51,7 @@ const About = () => {
     <>
       <Navigation />
       <section className="pt-10">
-        <div className="h-[100vh] px-4 sm:px-8 lg:px-16">
+        <div className="h-[85vh] px-4 sm:px-8 lg:px-16">
           <div className="w-full mb-6 overflow-hidden">
             <h1
               id="title"
@@ -67,8 +61,8 @@ const About = () => {
           </div>
           <div className="w-11/12 md:w-2/3">
             <p className="text-xl lg:text-4xl font-medium leading-none mb-10 animate-fade animate-once animate-delay-500">
-              Lorem ipsum dolor sit amet consectetur, adipisicing elit. Soluta
-              minima cupiditate laudantium quod nihil ratione!
+              Welcome! I'm thrilled to have you here and share a glimpse into
+              who I am and what drives my passion for being a Web Developer.
             </p>
           </div>
         </div>
@@ -87,10 +81,19 @@ const About = () => {
               <p className="text-lg font-medium">(001)</p>
             </div>
             <div className="w-full md:w-2/3">
-              <p className="text-3xl font-medium">
-                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nobis
-                ad quidem nemo, esse maiores quaerat, consequuntur blanditiis
-                earum, sit quo sunt porro! Aliquid, dolore rem.
+              <p className="text-3xl font-medium mb-5">
+                Hi! I'm a fresh graduate with a deep passion for web development
+                and a drive to create innovative and engaging online
+                experiences.
+              </p>
+              <p className="text-3xl font-medium mb-5">
+                Beyond web development, my passion extends to the broader field
+                of information technology, computers, and networks. With
+                excellent communication skills and a natural ability to
+                collaborate both individually and within a team, I thrive in
+                dynamic environments. I embrace challenges enthusiastically and
+                continuously seek opportunities to expand my knowledge and
+                skills, always excited to learn and explore new things.
               </p>
             </div>
           </div>
@@ -147,7 +150,7 @@ const About = () => {
               <div className="w-full md:w-2/3 py-3">
                 <p className="text-3xl font-medium">
                   Im always free to collaborate and new opportunities. If you
-                  have any question or need help with a project, feel free to
+                  have any question or need help with something, feel free to
                   contact me from link below
                 </p>
                 <div className="flex flex-wrap mt-5">

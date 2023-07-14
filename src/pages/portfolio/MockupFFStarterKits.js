@@ -14,13 +14,11 @@ const MockupFFStarterKits = () => {
       y: 0,
       delay: 0.2,
       duration: 0.5,
-      opacity: 1,
     });
     gsap.to("#title2", {
       y: 0,
       delay: 0.4,
       duration: 0.7,
-      opacity: 1,
     });
   });
 
@@ -56,21 +54,25 @@ const MockupFFStarterKits = () => {
     <>
       <Navigation />
       <section className="pt-10">
-        <div className="h-[100vh] px-4 sm:px-8 lg:px-16 flex flex-col justify-between">
-          <div className="w-full leading-none tracking-tighter">
-            <h1
-              id="title"
-              className="text-5xl md:text-6xl lg:text-8xl uppercase font-extrabold translate-y-full opacity-0">
-              Fathforce Starter Kits
-            </h1>
-            <h1
-              id="title2"
-              className="text-5xl md:text-6xl lg:text-8xl uppercase font-extrabold translate-y-full opacity-0">
-              Web Mockup
-            </h1>
+        <div className="h-[85vh] px-4 sm:px-8 lg:px-16 flex flex-col justify-between">
+          <div className="w-full">
+            <div className="overflow-hidden">
+              <h1
+                id="title"
+                className="text-5xl md:text-6xl lg:text-8xl uppercase font-extrabold leading-none tracking-tighter translate-y-full">
+                Fathforce Starter Kits
+              </h1>
+            </div>
+            <div className="overflow-hidden">
+              <h1
+                id="title2"
+                className="text-5xl md:text-6xl lg:text-8xl uppercase font-extrabold leading-none tracking-tighter translate-y-full">
+                Web Mockup
+              </h1>
+            </div>
           </div>
-          <div className="flex flex-wrap justify-between">
-            <p className="w-11/12 md:w-2/3 text-xl lg:text-4xl font-medium leading-none mb-10 animate-fade animate-once animate-delay-500">
+          <div className="flex flex-wrap justify-between animate-fade animate-once animate-delay-500">
+            <p className="w-11/12 md:w-2/3 text-xl lg:text-3xl font-medium leading-none mb-10 ">
               Web Mockup for FFStarterKits Web Apps that build and control your
               own website
             </p>
@@ -79,22 +81,29 @@ const MockupFFStarterKits = () => {
             </p>
           </div>
         </div>
-        <div data-aos="fade-up" className="mt-3 w-11/12 mx-auto">
+        <div
+          data-aos="fade-up"
+          data-aos-once="true"
+          className="mt-3 w-11/12 mx-auto">
           <img
             src={backupImg}
             alt="Mockup Backup FFStarterKits"
-            className="rounded-2xl object-cover h-[100vh] w-full"
+            className="rounded-2xl object-cover h-[50vh] md:h-full w-full"
           />
         </div>
         <div className="container mx-auto py-32 px-4">
           <div className="flex flex-wrap">
             <div className="w-full lg:w-1/3">
-              <p className="text-lg font-medium">*</p>
+              <p className="text-lg font-medium">(001)</p>
             </div>
             <div className="w-full lg:w-2/3 ">
               <p className="text-3xl font-medium mb-20">
-                Lorem ipsum dolor, sit amet consectetur adipisicing elit. Dolore
-                adipisci sit fugiat vel quidem perspiciatis.
+                During my internship program at PT Inovindo Digital Media, I had
+                the opportunity to collaborate with a talented team in creating
+                the Fathforce Starter Kits project. As part of the team, my role
+                focused on designing and implementing the backup and import
+                features web mockup using Figma, ensuring seamless functionality
+                and an enhanced user experience.
               </p>
               <a
                 href="https://www.figma.com/file/wkHBYg2Wa2MqfHh6u1tBwK/Mockup-backup-import?type=design&node-id=0%3A1&t=s32NUVYjy5yQqX7y-1"
@@ -124,6 +133,7 @@ const MockupFFStarterKits = () => {
           {images.map((img) => (
             <div
               data-aos="fade-up"
+              data-aos-once="true"
               key={img.name}
               className="bg-slate-100 p-2 lg:p-6 mb-10 rounded-2xl">
               <a
@@ -147,6 +157,7 @@ const MockupFFStarterKits = () => {
           <a href="/web/ffstarterkits" className="group">
             <div
               data-aos="fade-up"
+              data-aos-once="true"
               className="md:h-96 lg:h-[30rem] overflow-hidden rounded-2xl">
               <img
                 src={require(`../../assets/img/portfolio/ffstarterkits/todo 1.png`)}
@@ -156,7 +167,7 @@ const MockupFFStarterKits = () => {
             </div>
             <div className="flex justify-between flex-col sm:flex-row mt-3 mb-10">
               <p className="font-semibold text-center">
-                Fathforce Starter Kits
+                Fathforce Starter Kits To Do List
               </p>
               <p className="font-semibold text-center">Web Apps</p>
               <p className="font-semibold text-center">Laravel 8</p>

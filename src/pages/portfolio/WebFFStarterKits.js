@@ -14,13 +14,11 @@ const WebFFStarterKits = () => {
       y: 0,
       delay: 0.2,
       duration: 0.5,
-      opacity: 1,
     });
     gsap.to("#title2", {
       y: 0,
       delay: 0.4,
       duration: 0.7,
-      opacity: 1,
     });
   });
   const images = [
@@ -47,21 +45,25 @@ const WebFFStarterKits = () => {
     <>
       <Navigation />
       <section className="pt-10">
-        <div className="h-[100vh] px-4 sm:px-8 lg:px-16 flex flex-col justify-between">
-          <div className="w-full leading-none tracking-tighter">
-            <h1
-              id="title"
-              className="text-5xl md:text-6xl lg:text-8xl uppercase font-extrabold translate-y-full opacity-0">
-              Fathforce Starter Kits
-            </h1>
-            <h1
-              id="title2"
-              className="text-5xl md:text-6xl lg:text-8xl uppercase font-extrabold translate-y-full opacity-0">
-              Web Apps
-            </h1>
+        <div className="h-[85vh] px-4 sm:px-8 lg:px-16 flex flex-col justify-between">
+          <div className="w-full">
+            <div className="overflow-hidden">
+              <h1
+                id="title"
+                className="text-5xl md:text-6xl lg:text-8xl uppercase font-extrabold leading-none tracking-tighter translate-y-full">
+                Fathforce Starter Kits
+              </h1>
+            </div>
+            <div className="overflow-hidden">
+              <h1
+                id="title2"
+                className="text-5xl md:text-6xl lg:text-8xl uppercase font-extrabold leading-none tracking-tighter translate-y-full">
+                Web Apps
+              </h1>
+            </div>
           </div>
-          <div className="flex flex-wrap justify-between">
-            <p className="w-11/12 md:w-2/3 text-xl lg:text-4xl font-medium leading-none mb-10 animate-fade animate-once animate-delay-500">
+          <div className="flex flex-wrap justify-between animate-fade animate-once animate-delay-500">
+            <p className="w-11/12 md:w-2/3 text-xl lg:text-3xl font-medium leading-none mb-10">
               To Do List Feature for FFStarterKits Web Apps that build and
               control your own website
             </p>
@@ -70,22 +72,31 @@ const WebFFStarterKits = () => {
             </p>
           </div>
         </div>
-        <div data-aos="fade-up" className="mt-3 w-11/12 mx-auto">
+        <div
+          data-aos="fade-up"
+          data-aos-once="true"
+          className="mt-3 w-11/12 mx-auto">
           <img
             src={todoImg}
             alt="To Do List FFStarterKits"
-            className="rounded-2xl object-cover h-[100vh] w-full"
+            className="rounded-2xl object-cover h-[50vh] md:h-full w-full"
           />
         </div>
         <div className="container mx-auto py-32 px-4">
           <div className="flex flex-wrap">
             <div className="w-full lg:w-1/3">
-              <p className="text-lg font-medium">*</p>
+              <p className="text-lg font-medium">(001)</p>
             </div>
             <div className="w-full lg:w-2/3 ">
               <p className="text-3xl font-medium mb-20">
-                Lorem ipsum dolor, sit amet consectetur adipisicing elit. Dolore
-                adipisci sit fugiat vel quidem perspiciatis.
+                During my internship program at PT Inovindo Digital Media, I had
+                the privilege of being involved in the complete development
+                cycle of the web application project. After designing the web
+                mockup, my team and I utilized Laravel 8 framework to transform
+                it into a fully functional web application. I personally took
+                charge of developing the robust and intuitive To Do List
+                feature, enhancing the user experience and ensuring seamless
+                task management capabilities.
               </p>
               <a
                 href="https://github.com/aditbagja/todolist-ffstarterkits"
@@ -115,6 +126,7 @@ const WebFFStarterKits = () => {
           {images.map((img) => (
             <div
               data-aos="fade-up"
+              data-aos-once="true"
               key={img.name}
               className="bg-slate-100 p-2 lg:p-6 mb-10 rounded-2xl">
               <a
@@ -138,6 +150,7 @@ const WebFFStarterKits = () => {
           <a href="/mockup/digiline" className="group">
             <div
               data-aos="fade-up"
+              data-aos-once="true"
               className="md:h-96 lg:h-[30rem] overflow-hidden rounded-2xl">
               <img
                 src={require(`../../assets/img/portfolio/digiline/Dashboard.png`)}
