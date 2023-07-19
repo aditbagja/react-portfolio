@@ -54,6 +54,10 @@ const Home = () => {
     },
   ];
 
+  useEffect(() => {
+    document.title = "Adit Bagja Septiana";
+  });
+
   return (
     <>
       <Navigation />
@@ -77,10 +81,9 @@ const Home = () => {
           </div>
           <div className="w-11/12 md:w-2/3">
             <p className="text-xl lg:text-4xl font-medium leading-none mb-10 animate-fade animate-once animate-delay-500">
-              Welcome to my website, where I showcase my passion for web
+              Welcome! This is the place to showcase my passion for web
               development and demonstrate my expertise in creating visually
-              stunning, user-friendly, and interactive digital experiences that
-              leave a lasting impact.
+              stunning, user-friendly, and interactive digital experiences.
             </p>
           </div>
           <div className="overflow-hidden">

@@ -61,8 +61,8 @@ const About = () => {
           </div>
           <div className="w-11/12 md:w-2/3">
             <p className="text-xl lg:text-4xl font-medium leading-none mb-10 animate-fade animate-once animate-delay-500">
-              Welcome! I'm thrilled to have you here and share a glimpse into
-              who I am and what drives my passion for being a Web Developer.
+              Hi! I'm thrilled to have you here and share a glimpse into who I
+              am and what drives my passion for being a Web Developer.
             </p>
           </div>
         </div>
