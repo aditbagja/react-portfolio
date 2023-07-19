@@ -9,9 +9,3 @@
     scroll-behavior: smooth;
   }
 }
-
-@layer utilities {
-  .text-clipping {
-    clip-path: polygon(0 0, 100% 0, 100% 100%, 0% 100%);
-  }
-}

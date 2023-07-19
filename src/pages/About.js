@@ -77,10 +77,10 @@ const About = () => {
             data-aos="fade-up"
             data-aos-once="true"
             className="flex flex-wrap py-32">
-            <div className="w-full md:w-1/3">
+            <div className="w-full lg:w-1/3 mb-3">
               <p className="text-lg font-medium">(001)</p>
             </div>
-            <div className="w-full md:w-2/3">
+            <div className="w-full lg:w-2/3">
               <p className="text-3xl font-medium mb-5">
                 Hi! I'm a fresh graduate with a deep passion for web development
                 and a drive to create innovative and engaging online
@@ -144,10 +144,10 @@ const About = () => {
               data-aos="fade-up"
               data-aos-once="true"
               className="flex flex-wrap">
-              <div className="w-full md:w-1/3">
+              <div className="w-full lg:w-1/3 mb-3">
                 <p className="text-lg font-medium">(002)</p>
               </div>
-              <div className="w-full md:w-2/3 py-3">
+              <div className="w-full lg:w-2/3">
                 <p className="text-3xl font-medium">
                   Im always free to collaborate and new opportunities. If you
                   have any question or need help with something, feel free to
