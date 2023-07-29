@@ -81,12 +81,12 @@ const About = () => {
               <p className="text-lg font-medium">(001)</p>
             </div>
             <div className="w-full lg:w-2/3">
-              <p className="text-3xl font-medium mb-5">
+              <p className="text-xl md:text-3xl font-medium mb-5">
                 Hi! I'm a fresh graduate with a deep passion for web development
                 and a drive to create innovative and engaging online
                 experiences.
               </p>
-              <p className="text-3xl font-medium mb-5">
+              <p className="text-xl md:text-3xl font-medium mb-5">
                 Beyond web development, my passion extends to the broader field
                 of information technology, computers, and networks. With
                 excellent communication skills and a natural ability to
@@ -148,7 +148,7 @@ const About = () => {
                 <p className="text-lg font-medium">(002)</p>
               </div>
               <div className="w-full lg:w-2/3">
-                <p className="text-3xl font-medium">
+                <p className="text-2xl md:text-3xl font-medium">
                   Im always free to collaborate and new opportunities. If you
                   have any question or need help with something, feel free to
                   contact me from link below

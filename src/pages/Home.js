@@ -116,7 +116,7 @@ const Home = () => {
                 <div
                   data-aos="fade-up"
                   data-aos-once="true"
-                  className="md:h-96 lg:h-[30rem] overflow-hidden rounded-2xl">
+                  className="h-72 md:h-96 lg:h-[30rem] overflow-hidden rounded-2xl">
                   <img
                     src={require("../assets/img/portfolio/" + selected.img)}
                     alt={selected.name}

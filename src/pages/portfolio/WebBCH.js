@@ -93,10 +93,10 @@ const WebBCH = () => {
         <div className="container mx-auto py-32 px-4">
           <div className="flex flex-wrap">
             <div className="w-full lg:w-1/3">
-              <p className="text-lg font-medium">(001)</p>
+              <p className="text-lg font-medium mb-3">(001)</p>
             </div>
-            <div className="w-full lg:w-2/3 ">
-              <p className="text-3xl font-medium mb-20">
+            <div className="w-full lg:w-2/3">
+              <p className="text-xl md:text-3xl font-medium mb-20">
                 As part of an inspiring collaboration, I brought the Bandung
                 Creative Hub landing pages to life, building upon the design
                 crafted by my talented colleague, a skilled UI/UX designer.

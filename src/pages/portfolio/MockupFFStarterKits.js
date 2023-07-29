@@ -94,10 +94,10 @@ const MockupFFStarterKits = () => {
         <div className="container mx-auto py-32 px-4">
           <div className="flex flex-wrap">
             <div className="w-full lg:w-1/3">
-              <p className="text-lg font-medium">(001)</p>
+              <p className="text-lg font-medium mb-3">(001)</p>
             </div>
-            <div className="w-full lg:w-2/3 ">
-              <p className="text-3xl font-medium mb-20">
+            <div className="w-full lg:w-2/3">
+              <p className="text-xl md:text-3xl font-medium mb-20">
                 During my internship program at PT Inovindo Digital Media, I had
                 the opportunity to collaborate with a talented team in creating
                 the Fathforce Starter Kits project. As part of the team, my role
