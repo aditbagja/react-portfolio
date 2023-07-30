@@ -2,6 +2,7 @@ import React, { useLayoutEffect, useEffect } from "react";
 import { gsap } from "gsap";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faArrowDown } from "@fortawesome/free-solid-svg-icons";
+import { Link } from "react-router-dom";
 import Navigation from "../../components/Navigation";
 import Footer from "../../components/Footer";
 import newsletterImg from "../../assets/img/portfolio/newsletter/home.png";
@@ -152,7 +153,7 @@ const WebNewsletter = () => {
           <p className="text-4xl md:text-6xl uppercase font-extrabold mb-5">
             Next Portfolio
           </p>
-          <a href="/web/notflix" className="group">
+          <Link to="/web/notflix" className="group">
             <div
               data-aos="fade-up"
               data-aos-once="true"
@@ -168,7 +169,7 @@ const WebNewsletter = () => {
               <p className="font-semibold text-center">Landing Pages</p>
               <p className="font-semibold text-center">React JS</p>
             </div>
-          </a>
+          </Link>
         </div>
       </section>
       <Footer />

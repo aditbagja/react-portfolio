@@ -2,6 +2,7 @@ import React, { useLayoutEffect, useEffect } from "react";
 import { gsap } from "gsap";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faArrowDown } from "@fortawesome/free-solid-svg-icons";
+import { Link } from "react-router-dom";
 import Navigation from "../../components/Navigation";
 import Footer from "../../components/Footer";
 import digilineImg from "../../assets/img/portfolio/digiline/web/digiline 1.png";
@@ -153,7 +154,7 @@ const WebDigiLine = () => {
           <p className="text-4xl md:text-6xl uppercase font-extrabold mb-5">
             Next Portfolio
           </p>
-          <a href="/web/bandung-creative-hub" className="group">
+          <Link to="/web/bandung-creative-hub" className="group">
             <div
               data-aos="fade-up"
               data-aos-once="true"
@@ -169,7 +170,7 @@ const WebDigiLine = () => {
               <p className="font-semibold text-center">Landing Pages</p>
               <p className="font-semibold text-center">HTML, CSS, Javascript</p>
             </div>
-          </a>
+          </Link>
         </div>
       </section>
       <Footer />

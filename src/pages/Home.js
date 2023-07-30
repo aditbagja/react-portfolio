@@ -2,6 +2,7 @@ import React, { useEffect, useLayoutEffect } from "react";
 import { gsap } from "gsap";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faArrowDown } from "@fortawesome/free-solid-svg-icons";
+import { Link } from "react-router-dom";
 import Navigation from "../components/Navigation";
 import Footer from "../components/Footer";
 import AOS from "aos";
@@ -112,7 +113,7 @@ const Home = () => {
         <div className="px-4 sm:px-8 lg:px-16">
           <div className="relative overflow-hidden bg-cover bg-no-repeat w-11/12 sm:w-full mx-auto">
             {portfolioSelected.map((selected) => (
-              <a key={selected.name} href={selected.href} className="group">
+              <Link key={selected.name} to={selected.href} className="group">
                 <div
                   data-aos="fade-up"
                   data-aos-once="true"
@@ -130,7 +131,7 @@ const Home = () => {
                   </p>
                   <p className="font-semibold text-center">{selected.tech}</p>
                 </div>
-              </a>
+              </Link>
             ))}
           </div>
         </div>

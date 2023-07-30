@@ -2,6 +2,7 @@ import React, { useEffect, useLayoutEffect } from "react";
 import { gsap } from "gsap";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faArrowDown } from "@fortawesome/free-solid-svg-icons";
+import { Link } from "react-router-dom";
 import Navigation from "../../components/Navigation";
 import Footer from "../../components/Footer";
 import backupImg from "../../assets/img/portfolio/ffstarterkits/Mockup Backup.png";
@@ -154,7 +155,7 @@ const MockupFFStarterKits = () => {
           <p className="text-4xl md:text-6xl uppercase font-extrabold mb-5">
             Next Portfolio
           </p>
-          <a href="/web/ffstarterkits" className="group">
+          <Link to="/web/ffstarterkits" className="group">
             <div
               data-aos="fade-up"
               data-aos-once="true"
@@ -172,7 +173,7 @@ const MockupFFStarterKits = () => {
               <p className="font-semibold text-center">Web Apps</p>
               <p className="font-semibold text-center">Laravel 8</p>
             </div>
-          </a>
+          </Link>
         </div>
       </section>
       <Footer />

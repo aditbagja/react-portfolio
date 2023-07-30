@@ -2,6 +2,7 @@ import React, { useEffect, useLayoutEffect } from "react";
 import { gsap } from "gsap";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faArrowDown } from "@fortawesome/free-solid-svg-icons";
+import { Link } from "react-router-dom";
 import Navigation from "../../components/Navigation";
 import Footer from "../../components/Footer";
 import todoImg from "../../assets/img/portfolio/ffstarterkits/todo 1.png";
@@ -147,7 +148,7 @@ const WebFFStarterKits = () => {
           <p className="text-4xl md:text-6xl uppercase font-extrabold mb-5">
             Next Portfolio
           </p>
-          <a href="/mockup/digiline" className="group">
+          <Link to="/mockup/digiline" className="group">
             <div
               data-aos="fade-up"
               data-aos-once="true"
@@ -163,7 +164,7 @@ const WebFFStarterKits = () => {
               <p className="font-semibold text-center">Web Mockup</p>
               <p className="font-semibold text-center">Figma</p>
             </div>
-          </a>
+          </Link>
         </div>
       </section>
       <Footer />
