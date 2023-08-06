@@ -20,7 +20,7 @@ const Footer = () => {
     },
     {
       name: "Linkedin",
-      href: "https://www.linkedin.com/in/adit-bagja-septiana-22727718a/",
+      href: "https://www.linkedin.com/in/aditbagja",
     },
   ];
   return (
