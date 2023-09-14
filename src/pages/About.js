@@ -4,7 +4,7 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faArrowDown } from "@fortawesome/free-solid-svg-icons";
 import Navigation from "../components/Navigation";
 import Footer from "../components/Footer";
-import resume from "../assets/files/CV Adit Bagja.pdf";
+import resume from "../assets/files/My Resume.pdf";
 import AOS from "aos";
 import "aos/dist/aos.css";
 
